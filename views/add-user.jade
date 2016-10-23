@@ -4,20 +4,20 @@ block content
     h1= title
 
     form(action="", method="post")
-        p
+        div.form-group
             label Name:
-            input(type="text", name="name", value="#{user.name}")
+            input(type="text", name="name", value="#{user.name}", class="form-control")
         
-        p
+        div.form-group
             label city:
-            input(type="text", name="city", value="#{user.city}")
-        p
+            input(type="text", name="city", value="#{user.city}", class="form-control")
+        div.form-group
             label Email:
-            input(type="text", name="email", value="#{user.email}")
-        p
+            input(type="text", name="email", value="#{user.email}", class="form-control")
+        div.form-group
             label Mobile:
-            input(type="text", name="mobile", value="#{user.mobile}")
-        P
-            button(type="submit") Submit
+            input(type="text", name="mobile", value="#{user.mobile}", class="form-control")
+        div.form-group
+            button(type="submit", class="btn btn-default") Submit
 
 

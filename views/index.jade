@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= title
-  h3 Click below to create, read, update and delete Users:-
-  a(href="/users") Users
+
+  div.jumbotron
+    div.container
+      h1
+        | Basic CRUD functionalities
+      p Click below to create, read, update and delete Users:-
+      p
+        a.btn.btn-primary.btn-lg(href='/users', role='button') Users
