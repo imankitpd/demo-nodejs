@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1= title
+ 
+  a(href="/users/add") Add User
+
+  table(class="table table-striped")
+    thead
+      tr
+        th S.No.
+        th Name
+        th City
+        th Email id
+        th Phone no.
+        th 
+
+     tbody
+       if users.length == 0
+        tr
+          td(colspan="6", class="text-center") No User Exist.
+       else
+        each user, i in users
+          tr
+            td=i+1
+            td=user.name
+            td=user.city
+            td=user.email
+            td=user.mobile
+            td
+              a(href="/users/update/#{user.id}") edit
+              span  | 
+              a(href="/users/delete/#{user.id}") delete
+            
+        

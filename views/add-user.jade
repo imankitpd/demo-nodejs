@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1= title
+
+    form(action="", method="post")
+        p
+            label Name:
+            input(type="text", name="name", value="#{user.name}")
+        
+        p
+            label city:
+            input(type="text", name="city", value="#{user.city}")
+        p
+            label Email:
+            input(type="text", name="email", value="#{user.email}")
+        p
+            label Mobile:
+            input(type="text", name="mobile", value="#{user.mobile}")
+        P
+            button(type="submit") Submit
+
+
