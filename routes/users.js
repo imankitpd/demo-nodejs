@@ -24,6 +24,8 @@ router.get('/', function (req, res, next) {
 // Add User
 router.get('/add', function (req, res, next) {
   res.render('add-user', {title: "Add User", user: {name:"", city:"", email:"", mobile:""}});
+    // first comment for keno 1st
+
 });
 
 router.post('/add', function (req, res, next) {
