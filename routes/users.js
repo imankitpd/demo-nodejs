@@ -17,13 +17,14 @@ var UserDetails = mongoose.model('UserDetails', userDetailsSchema);
 router.get('/', function (req, res, next) {
   UserDetails.find().then(function (users) {
     res.render('users', {users: users, title: "Users"});
-    // first comment for keno 1st
   });
 });
 
 // Add User
 router.get('/add', function (req, res, next) {
   res.render('add-user', {title: "Add User", user: {name:"", city:"", email:"", mobile:""}});
+    // first comment for keno 1st
+
 });
 
 router.post('/add', function (req, res, next) {
